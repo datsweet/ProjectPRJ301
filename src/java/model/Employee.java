@@ -4,6 +4,8 @@
  */
 package model;
 
+import java.util.Date;
+
 /**
  *
  * @author GIGABYTE
@@ -11,21 +13,27 @@ package model;
 public class Employee {
     private int id;
     private int user_id;
-    private String department;
+    private String name;
+    private String email;
+    private String phone;
     private String position;
-    private boolean is_active;
+    private Date created_at;
+    private Date updated_at;
 
     public Employee() {
     }   
 
-    public Employee(int id, int user_id, String department, String position, boolean is_active) {
+    public Employee(int id, int user_id, String name, String email, String phone, String position, Date created_at, Date updated_at) {
         this.id = id;
         this.user_id = user_id;
-        this.department = department;
+        this.name = name;
+        this.email = email;
+        this.phone = phone;
         this.position = position;
-        this.is_active = is_active;
+        this.created_at = created_at;
+        this.updated_at = updated_at;
     }
-
+    
     public int getId() {
         return id;
     }
@@ -42,13 +50,29 @@ public class Employee {
         this.user_id = user_id;
     }
 
-    public String getDepartment() {
-        return department;
+    public String getName() {
+        return name;
     }
 
-    public void setDepartment(String department) {
-        this.department = department;
+    public void setName(String name) {
+        this.name = name;
     }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }  
 
     public String getPosition() {
         return position;
@@ -58,16 +82,24 @@ public class Employee {
         this.position = position;
     }
 
-    public boolean isIs_active() {
-        return is_active;
+    public Date getCreated_at() {
+        return created_at;
     }
 
-    public void setIs_active(boolean is_active) {
-        this.is_active = is_active;
+    public void setCreated_at(Date created_at) {
+        this.created_at = created_at;
+    }
+
+    public Date getUpdated_at() {
+        return updated_at;
+    }
+
+    public void setUpdated_at(Date updated_at) {
+        this.updated_at = updated_at;
     }
 
     @Override
     public String toString() {
-        return "Employee{" + "id=" + id + ", user_id=" + user_id + ", department=" + department + ", position=" + position + ", is_active=" + is_active + '}';
-    }     
+        return "Employee{" + "id=" + id + ", user_id=" + user_id + ", name=" + name + ", email=" + email + ", phone=" + phone + ", position=" + position + ", created_at=" + created_at + ", updated_at=" + updated_at + '}';
+    }   
 }
