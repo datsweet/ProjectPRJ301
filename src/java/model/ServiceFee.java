@@ -18,13 +18,13 @@ public class ServiceFee {
     private double parking_fee;
     private double service_fee;
     private double total_fee;
-    private boolean is_paid;
-    private Date payment_date;
+    private Date created_at;
+    private Date updated_at;
 
     public ServiceFee() {
     }
 
-    public ServiceFee(int id, int apartment_id, Date month, double water_fee, double parking_fee, double service_fee, double total_fee, boolean is_paid, Date payment_date) {
+    public ServiceFee(int id, int apartment_id, Date month, double water_fee, double parking_fee, double service_fee, double total_fee, Date created_at, Date updated_at) {
         this.id = id;
         this.apartment_id = apartment_id;
         this.month = month;
@@ -32,8 +32,8 @@ public class ServiceFee {
         this.parking_fee = parking_fee;
         this.service_fee = service_fee;
         this.total_fee = total_fee;
-        this.is_paid = is_paid;
-        this.payment_date = payment_date;
+        this.created_at = created_at;
+        this.updated_at = updated_at;
     }
 
     public int getId() {
@@ -92,24 +92,24 @@ public class ServiceFee {
         this.total_fee = total_fee;
     }
 
-    public boolean isIs_paid() {
-        return is_paid;
+    public Date getCreated_at() {
+        return created_at;
     }
 
-    public void setIs_paid(boolean is_paid) {
-        this.is_paid = is_paid;
+    public void setCreated_at(Date created_at) {
+        this.created_at = created_at;
     }
 
-    public Date getPayment_date() {
-        return payment_date;
+    public Date getUpdated_at() {
+        return updated_at;
     }
 
-    public void setPayment_date(Date payment_date) {
-        this.payment_date = payment_date;
+    public void setUpdated_at(Date updated_at) {
+        this.updated_at = updated_at;
     }
 
     @Override
     public String toString() {
-        return "ServiceFee{" + "id=" + id + ", apartment_id=" + apartment_id + ", month=" + month + ", water_fee=" + water_fee + ", parking_fee=" + parking_fee + ", service_fee=" + service_fee + ", total_fee=" + total_fee + ", is_paid=" + is_paid + ", payment_date=" + payment_date + '}';
-    }   
+        return "ServiceFee{" + "id=" + id + ", apartment_id=" + apartment_id + ", month=" + month + ", water_fee=" + water_fee + ", parking_fee=" + parking_fee + ", service_fee=" + service_fee + ", total_fee=" + total_fee + ", created_at=" + created_at + ", updated_at=" + updated_at + '}';
+    }  
 }
