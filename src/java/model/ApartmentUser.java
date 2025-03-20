@@ -12,18 +12,16 @@ public class ApartmentUser {
     private int id;
     private int apartment_id;
     private int user_id;
-    private String user_type;
-    private boolean is_active;
+    private String role;
 
     public ApartmentUser() {
     }
 
-    public ApartmentUser(int id, int apartment_id, int user_id, String user_type, boolean is_active) {
+    public ApartmentUser(int id, int apartment_id, int user_id, String role) {
         this.id = id;
         this.apartment_id = apartment_id;
         this.user_id = user_id;
-        this.user_type = user_type;
-        this.is_active = is_active;
+        this.role = role;
     }
 
     public int getId() {
@@ -50,24 +48,16 @@ public class ApartmentUser {
         this.user_id = user_id;
     }
 
-    public String getUser_type() {
-        return user_type;
+    public String getRole() {
+        return role;
     }
 
-    public void setUser_type(String user_type) {
-        this.user_type = user_type;
-    }
-
-    public boolean isIs_active() {
-        return is_active;
-    }
-
-    public void setIs_active(boolean is_active) {
-        this.is_active = is_active;
+    public void setRole(String role) {
+        this.role = role;
     }
 
     @Override
     public String toString() {
-        return "ApartmentUser{" + "id=" + id + ", apartment_id=" + apartment_id + ", user_id=" + user_id + ", user_type=" + user_type + ", is_active=" + is_active + '}';
+        return "ApartmentUser{" + "id=" + id + ", apartment_id=" + apartment_id + ", user_id=" + user_id + ", role=" + role + '}';
     }   
 }
