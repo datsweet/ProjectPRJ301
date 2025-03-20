@@ -11,29 +11,21 @@ import java.util.Date;
  * @author GIGABYTE
  */
 public class Resident {
-    private int id;
+    private int id;    
+    private String name;
     private int apartment_id;
-    private String full_name;
-    private Date date_of_birth;
-    private String gender;
-    private String id_number;
-    private String phone_number;
-    private String relationship;
-    private boolean is_active;
+    private String relationship_to_owner;
+    private Date created_at;
 
     public Resident() {
     }
 
-    public Resident(int id, int apartment_id, String full_name, Date date_of_birth, String gender, String id_number, String phone_number, String relationship, boolean is_active) {
+    public Resident(int id, String name, int apartment_id, String relationship_to_owner, Date created_at) {
         this.id = id;
+        this.name = name;
         this.apartment_id = apartment_id;
-        this.full_name = full_name;
-        this.date_of_birth = date_of_birth;
-        this.gender = gender;
-        this.id_number = id_number;
-        this.phone_number = phone_number;
-        this.relationship = relationship;
-        this.is_active = is_active;
+        this.relationship_to_owner = relationship_to_owner;
+        this.created_at = created_at;
     }
 
     public int getId() {
@@ -52,64 +44,32 @@ public class Resident {
         this.apartment_id = apartment_id;
     }
 
-    public String getFull_name() {
-        return full_name;
+    public String getName() {
+        return name;
     }
 
-    public void setFull_name(String full_name) {
-        this.full_name = full_name;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public Date getDate_of_birth() {
-        return date_of_birth;
+    public String getRelationship_to_owner() {
+        return relationship_to_owner;
     }
 
-    public void setDate_of_birth(Date date_of_birth) {
-        this.date_of_birth = date_of_birth;
+    public void setRelationship_to_owner(String relationship_to_owner) {
+        this.relationship_to_owner = relationship_to_owner;
     }
 
-    public String getGender() {
-        return gender;
+    public Date getCreated_at() {
+        return created_at;
     }
 
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    public String getId_number() {
-        return id_number;
-    }
-
-    public void setId_number(String id_number) {
-        this.id_number = id_number;
-    }
-
-    public String getPhone_number() {
-        return phone_number;
-    }
-
-    public void setPhone_number(String phone_number) {
-        this.phone_number = phone_number;
-    }
-
-    public String getRelationship() {
-        return relationship;
-    }
-
-    public void setRelationship(String relationship) {
-        this.relationship = relationship;
-    }
-
-    public boolean isIs_active() {
-        return is_active;
-    }
-
-    public void setIs_active(boolean is_active) {
-        this.is_active = is_active;
+    public void setCreated_at(Date created_at) {
+        this.created_at = created_at;
     }
 
     @Override
     public String toString() {
-        return "Resident{" + "id=" + id + ", apartment_id=" + apartment_id + ", full_name=" + full_name + ", date_of_birth=" + date_of_birth + ", gender=" + gender + ", id_number=" + id_number + ", phone_number=" + phone_number + ", relationship=" + relationship + ", is_active=" + is_active + '}';
+        return "Resident{" + "id=" + id + ", name=" + name + ", apartment_id=" + apartment_id + ", relationship_to_owner=" + relationship_to_owner + ", created_at=" + created_at + '}';
     }   
 }
